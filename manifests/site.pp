@@ -55,12 +55,5 @@ node default {
 #    creates => '/etc/motd',
 #  }
 
-  include users
-  include skeleton
-
 }
 
-node 'spidersddd.puppetlabs.vm' {
-  include users
-  include skeleton
-}
