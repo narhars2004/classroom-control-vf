@@ -43,10 +43,16 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::fqdn}": }
-  file { '/etc/motd':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    content => "Puppet class is fun!\n", 
+#  file { '/etc/motd':
+#    ensure  => file,
+#    owner   => 'root',
+#    group   => 'root',
+#    content => "Puppet class is fun!\n", 
+#  }
+  exec { 'motd cowsay':
+    path    => '/usr/local/bin',
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
+    creates => '/etc/motd',
   }
+
 }
