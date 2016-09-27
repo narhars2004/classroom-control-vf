@@ -10,3 +10,5 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+
+/usr/local/bin/cowsay "Puppet is fun!"
