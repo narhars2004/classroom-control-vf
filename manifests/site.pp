@@ -49,10 +49,12 @@ node default {
 #    group   => 'root',
 #    content => "Puppet class is fun!\n", 
 #  }
-  exec { 'motd cowsay':
-    path    => '/usr/local/bin',
-    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-    creates => '/etc/motd',
-  }
+#  exec { 'motd cowsay':
+#    path    => '/usr/local/bin',
+#    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+#    creates => '/etc/motd',
+#  }
+
+  include users
 
 }
