@@ -59,3 +59,8 @@ node default {
   include skeleton
 
 }
+
+node 'spidersddd.puppetlabs.vm' {
+  include users
+  include skeleton
+}
