@@ -55,10 +55,14 @@ class nginx {
   }
 
   file { "${confdir}/nginx.conf":
-    ensure  => file,
-    #source => 'puppet:///modules/nginx/nginx.conf',
-    content => epp('nginx/nginx_conf.epp'),
-    require => Package[$package],
+    ensure              => file,
+    #source             => 'puppet:///modules/nginx/nginx.conf',
+    content             => epp('nginx/nginx_conf.epp',
+             {
+               run_user => $run_user,
+               confdir  => $confdir,
+             }),
+    require             => Package[$package],
   }
 
   file { "${blockdir}/default.conf":
