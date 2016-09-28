@@ -54,6 +54,8 @@ node default {
 #    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
 #    creates => '/etc/motd',
 #  }
+  $message = hiera('message', '')
+  notify { "The Hiera message is: $message": }
   include memcached
   include users
 
