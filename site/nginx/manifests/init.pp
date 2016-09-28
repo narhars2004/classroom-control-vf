@@ -25,4 +25,8 @@ class nginx {
     require => Package['nginx'],
   }
 
+  service { 'nginx':
+    ensure    => running,
+    subscribe => File['/etc/nginx/conf.d/default.conf', '/etc/nginx/nginx.conf'],
+  }
 }
