@@ -17,7 +17,8 @@ class profile::forge_lab {
   }
 
   class { 'redis':
-    bind        => $::ipaddress,
-    masterauth  => $redis_password,
+    bind       => $::ipaddress,
+    masterauth => $redis_password,
+    require    => Class['epel'],
   }
 }
