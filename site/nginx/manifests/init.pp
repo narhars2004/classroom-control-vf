@@ -63,6 +63,8 @@ class nginx (
              {
                run_user => $run_user,
                confdir  => $confdir,
+               blockdir => $blockdir,
+               confdir  => $confdir,
              }),
     require             => Package[$package],
   }
@@ -72,7 +74,7 @@ class nginx (
     #source  => 'puppet:///modules/nginx/default.conf',
     content => epp('nginx/default_conf.epp',
             {
-              blockdir =>  $blockdir,
+              docroot  => $docroot,
               }),
     require            => Package[$package],
   }
