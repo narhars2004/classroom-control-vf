@@ -1,3 +1,4 @@
 ---
 message: This message came from the common hiera common.yaml.
 
+nginx::docroot: '/var/www'
