@@ -1,10 +1,10 @@
 class profile::forge_lab {
   $redis_password = hiera('profile::redis_password', 'default_password')
 
-  sysctl { "kernel.sysrq":
-    ensure  => present,
-    target  => '/etc/sysctl.d/99-sysctl.conf',
-    comment => "This is a comment from Profile::forge_lab",
+  sysctl { "net.ipv4.ip_forward":
+    ensure => present,
+    value  => "1",
+    target => "/etc/sysctl.d/forwarding.conf",
   }
 
   include epel
