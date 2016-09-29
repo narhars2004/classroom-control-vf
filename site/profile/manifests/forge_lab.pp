@@ -3,7 +3,7 @@ class profile::forge_lab {
 
   sysctl { "kernel.sysrq":
     ensure    => present,
-    comment => "",
+    comment => "This is a comment from Profile::forge_lab",
   }
 
   include epel
