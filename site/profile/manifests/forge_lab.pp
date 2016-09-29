@@ -2,7 +2,8 @@ class profile::forge_lab {
   $redis_password = hiera('profile::redis_password', 'default_password')
 
   sysctl { "kernel.sysrq":
-    ensure    => present,
+    ensure  => present,
+    target  => '/etc/sysctl.d/99-sysctl.conf',
     comment => "This is a comment from Profile::forge_lab",
   }
 
