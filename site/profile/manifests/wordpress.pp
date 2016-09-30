@@ -3,7 +3,7 @@ class profile::wordpress {
 
   class { 'wordpress':
     install_dir    => '/opt/wordpress',
-    #  wp_multisite   => true,
+    wp_multisite   => false,
     #wp_site_domain => $domain,
   }
 }
