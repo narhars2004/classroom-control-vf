@@ -9,4 +9,8 @@ class profile::apache {
     port    => '80',
     docroot => '/var/www/html',
   }
+  apache::vhost { $::ipaddress:
+    port    => '80',
+    docroot => '/var/www/html',
+  }
 }
