@@ -5,4 +5,5 @@ class profile::apache {
     default_vhost => false,
   }
   include ::apache::mod::php
+  apache::listen { '80': }
 }
