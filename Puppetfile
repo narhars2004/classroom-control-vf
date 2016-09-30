@@ -9,6 +9,7 @@ mod 'saz-limits', '2.3.0'
 mod 'arioch-redis', '1.2.3'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/mysql'
+mod 'puppetlabs/apache'
 
 
 # Installs the puppetlabs/vcsrepo module from its GitHub repository
