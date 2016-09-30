@@ -4,5 +4,6 @@ class profile::mysql_server {
   class { '::mysql::server':
     root_password => $sql_password,
   }
+  include mysql::bindings::php
 
 }
