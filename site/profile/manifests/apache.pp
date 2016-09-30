@@ -5,7 +5,6 @@ class profile::apache {
   apache::vhost { $::fqdn:
     port       => 80,
     docroot    => $docroot,
-    mpm_module => 'prefork',
   }
 
   include ::apache::mod::php
