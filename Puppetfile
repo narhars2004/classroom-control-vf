@@ -10,6 +10,7 @@ mod 'arioch-redis', '1.2.3'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/mysql'
 mod 'puppetlabs/apache'
+mod 'hunner/wordpress'
 
 
 # Installs the puppetlabs/vcsrepo module from its GitHub repository
