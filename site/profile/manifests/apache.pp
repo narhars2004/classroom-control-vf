@@ -7,4 +7,5 @@ class profile::apache {
   }
 
   include ::apache::mod::php
+  include ::apache::mod::prefork
 }
