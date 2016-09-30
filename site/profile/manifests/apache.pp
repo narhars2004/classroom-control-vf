@@ -5,7 +5,7 @@ class profile::apache {
     default_vhost => false,
   }
   include ::apache::mod::php
-  apache::vhost { '127.0.0.1':
+  apache::vhost { $::fqdn:
     port    => '80',
     docroot => '/var/www/html',
   }
