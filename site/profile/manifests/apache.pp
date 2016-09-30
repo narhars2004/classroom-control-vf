@@ -1,6 +1,8 @@
 class profile::apache {
   $docroot = hiera('profile::apache::docroot', '/opt/wordpress')
 
-  include ::apache
+  class { 'apache':
+    default_vhost => false,
+  }
   include ::apache::mod::php
 }
